@@ -1,55 +1,40 @@
 # Matcha Hotspot Billing System
 
-A comprehensive billing and management system for commercial ISPs and WiFi hotspots.
+A comprehensive Laravel and Vue.js application for managing hotspot billing systems with Mikrotik integration.
 
 ## Features
 
-### Core Billing Features
-- Voucher-based and account-based access
-- Multiple plan types: time-based, data-based, speed-based, unlimited
-- Automatic session tracking and enforcement
-- Concurrent session control
-- Wallet system with pay-as-you-go billing
-- Detailed usage logging
+- Voucher management system
+- Billing plan configuration
+- Mikrotik RouterOS API integration
+- User authentication and authorization
+- Real-time connection monitoring
+- Payment processing integration
+- Detailed reporting and analytics
 
-### Campaign Management
-- Free trials and referral rewards
-- Time-based promotions
-- Discount campaigns
-- Analytics and tracking
+## Requirements
 
-### Administrative Dashboard
-- Real-time session monitoring
-- Voucher batch management
-- User and device management
-- Financial reporting
-- Role-based access control
+- PHP >= 8.0
+- Composer
+- Node.js >= 14
+- NPM or Yarn
+- MySQL/MariaDB
 
-### User Interface
-- Responsive captive portal
-- Account dashboard
-- Purchase and renewal flows
-- Mobile-first design
+## Installation
 
-## Technical Architecture
+1. Clone the repository
+2. Install PHP dependencies: `composer install`
+3. Install Node.js dependencies: `npm install` or `yarn install`
+4. Copy `.env.example` to `.env` and configure your settings
+5. Generate application key: `php artisan key:generate`
+6. Run database migrations: `php artisan migrate`
+7. Build frontend assets: `npm run build` or `yarn build`
 
-### Backend Stack
-- **Framework**: Laravel 9.x+ with PHP 8.x
-- **Database**: MySQL 8.x / MariaDB 10.x
-- **Authentication**: RADIUS integration (CoovaChilli/FreeRADIUS)
-- **Queue System**: Redis with Laravel Horizon
-- **Payment Processing**: Stripe/PayPal API
-- **File Generation**: PDF generation for vouchers
+## Usage
 
-### Frontend Stack
-- **Framework**: Vue.js 3 with Composition API
-- **Styling**: Tailwind CSS with custom components
-- **State Management**: Pinia
-- **Routing**: Vue Router
-- **HTTP Client**: Axios
+1. Start the development server: `php artisan serve`
+2. Build frontend assets: `npm run dev` or `yarn dev`
 
-### Infrastructure
-- **Web Server**: Nginx with SSL termination
-- **Load Balancer**: HAProxy or cloud load balancer
-- **Monitoring**: Laravel Telescope, Logstash
-- **Backup Strategy**: Automated database backups
+## License
+
+This project is open-source software licensed under the MIT license.
